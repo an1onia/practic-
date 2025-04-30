@@ -1,0 +1,363 @@
+/* Fonturi și stiluri globale */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-color: #d16b7c;
+  --second-color: #641a2d;
+  --text-color: #030000;
+  --bg-color: #fff;
+}
+
+::selection {
+  color: var(--bg-color);
+  background: var(--second-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  font-weight: 500;
+  background-color: #dc798a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-name {
+  font-size: 27px;
+  font-weight: medium;
+}
+
+.site-name .part1 {
+  color: var(--bg-color);
+}
+
+.site-name .part2 {
+  color: var(--second-color);
+}
+
+.button {
+  padding: 8px 14px;
+  border: 2px solid var(--bg-color);
+  background: var(--bg-color);
+  color: var(--second-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:hover {
+  background-color: var(--second-color);
+  color: var(--bg-color);
+}
+
+/* Secțiunea Home */
+
+.home {
+  margin-top: 60px; /* Evită suprapunerea cu navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem; /* Înălțimea este de două ori mai mică */
+  width: 100%; /* Fundalul să fie pe toată lățimea ecranului */
+  background-color: var(--container-color); /* Fundalul pentru titlu și subtitlu */
+}
+
+.home-text {
+  padding: 0; /* Elimină padding-ul suplimentar */
+  text-align: center;
+  color: var(--bg-color); /* Textul să fie vizibil pe fundal */
+}
+
+.home-title {
+  font-size: 2.5rem; /* Dimensiunea titlului */
+  margin-bottom: 0.5rem; /* Spațiu între titlu și subtitlu */
+}
+
+.home-subtitle {
+  font-size: 1rem; /* Dimensiunea subtitlului */
+  font-weight: 400;
+}
+
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.home::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent; /* Elimină culoarea gri */
+  z-index: 100;
+  opacity: 0; /* Setează opacitatea la 0 pentru a elimina efectul */
+}
+
+.form_container {
+  position: fixed; /* Poziționează formularul relativ la fereastra browserului */
+  top: 50%; /* Centrează pe verticală */
+  left: 50%; /* Centrează pe orizontală */
+  transform: translate(-50%, -50%); /* Ajustează poziția pentru a fi exact în centru */
+  max-width: 320px;
+  width: 100%;
+  z-index: 101;
+  background: var(--bg-color);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Dezactivează interacțiunea implicit */
+}
+/* Stil pentru butonul "Conectează" */
+.form_container button {
+  display: block;
+  margin: 20px auto; /* Centrează butonul */
+  padding: 10px 20px;
+  background-color: var(--second-color); /* Culoarea principală a site-ului */
+  color: var(--bg-color); /* Culoarea textului */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form_container button:hover {
+  background-color: var(--container-color); /* Culoarea secundară a site-ului */
+  color: var(--text-color); /* Culoarea textului */
+}
+
+.form_container button:active {
+  transform: scale(0.95); /* Efect de apăsare */
+}
+
+.form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 22px;
+  color: var(--text-color);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.form_container h2 {
+  font-size: 22px;
+  color: var(--text-color);
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Formulare input */
+.input_box {
+  position: relative;
+margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+
+.input_box input {
+  width: 100%;
+  padding: 10px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.input_box i.pw_hide {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #707070;
+}
+
+.input_box .icon-left,
+.input_box .icon-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #707070;
+}
+
+.input_box .icon-left {
+  left: 10px;
+}
+
+.input_box .icon-right {
+  right: 10px;
+  cursor: pointer;
+}
+
+.option_field {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_container a {
+  color: #b80018;
+  font-size: 12px;
+}
+
+.form_container a:hover {
+  text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.checkbox input {
+  accent-color: #b80018;
+}
+
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #000000;
+}
+
+.login_signup {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.form_signup {
+  display: none;
+}
+
+.post-filter{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+  margin-top: 2rem !important;
+}
+.filter-item {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor:pointer;
+}
+.active-filter{
+  background: var(--second-color);
+  color: var(--bg-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.post{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  justify-content: center;
+  gap: 1.5rem;
+}
+.post-box {
+  background: var(--bg-color);
+  box-shadow: 0 4px 14px hsl(280, 50%, 15%);
+  padding: 15px;
+  border-radius: 0.5rem;
+}
+.post-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+.category {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+.post-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  display: --webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post-reference {
+  display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.post-description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 5px 0 10px;
+  display: --webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

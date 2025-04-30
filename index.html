@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matricea destinului</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header class="navbar">
+      <div class="site-name">
+        <span class="part1">Numero</span><span class="part2">logia</span>
+      </div>
+      <button class="button" id="form-open">Autentificare</button>
+      <div class="form_container" style="display: none;">
+        <i class="uil uil-times form_close"></i>
+        <div class="form_login">
+          <form action="#" id="login-form">
+            <h2>Autentificare</h2>
+            <div class="input_box">
+              <input type="email" placeholder="Introduceți emailul/numele de utilizator a dvs." />
+              <i class="uil uil-envelope-alt icon-left"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Introduceți parola" />
+              <i class="uil uil-lock icon-left"></i>
+              <i class="uil uil-eye-slash icon-right pw_hide"></i>
+            </div>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check">
+                <label for="check">Memorează parola</label>
+              </span>
+              <a href="#" class="forgot_pw">Ați uitat parola?</a>
+            </div>
+            <button type="button">Conectează!</button>
+            <div class="login_signup">Nu ai un cont? 
+              <a href="#" class="switch-to-signup">Crează un cont!</a>
+            </div>
+          </form>
+        </div>
+      
+        <div class="form_signup" style="display: none;">
+          <form action="#" id="signup-form">
+            <h2>Creare cont</h2>
+            <div class="input_box">
+              <input type="text" placeholder="Introduceți numele de utilizator" />
+              <i class="uil uil-user icon-left"></i>
+            </div>
+            <div class="input_box">
+              <input type="email" placeholder="Introduceți emailul " />
+              <i class="uil uil-envelope-alt icon-left"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Introduceți parola" />
+              <i class="uil uil-lock icon-left"></i>
+              <i class="uil uil-eye-slash icon-right pw_hide"></i>
+            </div>
+            <button type="button">Înregistrează-te!</button>
+            <div class="login_signup">Ai deja un cont? 
+              <a href="#" class="switch-to-login">Autentificare</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+   </header>
+    
+    <!-- Secțiunea principală cu titlul și subtitlul -->
+    <section class="home">
+      <div class="home-text container">
+        <h2 class="home-title">Matricea destinului</h2>
+        <span class="home-subtitle">destinul e în mâinile tale</span>
+      </div>
+    </section>
+
+    <!-- Secțiunea cu formularul de login -->
+
+    
+    
+
+    <div class="post-filter container">
+      <span class="filter-item active-filter" data-filter="toate">Toate</span>
+      <span class="filter-item" data-filter="arcane">Arcane</span>
+      <span class="filter-item" data-filter="matricea">Matricea</span>
+      <span class="filter-item" data-filter="ajutor">Ajutor</span>
+    </div>
+    <section class="post container">
+
+<!--introducere-->
+
+        <div class="post-box acasa">
+          <img src="img/img00.png" alt="" class="post-img">
+          <h2 class="category">Acasa</h2>
+          <a href="post-page.html" class="post-title"> 
+            Introducere
+          </a>
+          <span class="post-reference">Notiuni generale</span>
+          <p class="post-description"> Ce este numerologia? Pentru ce oamenii cred in puterea numerelor? Citeste articolul de mai jos, pentru a afla raspunsul la intrebarile ce te framanta </p>
+        </div>
+
+      <!--en 0-->
+
+      <div class="post-box arcane">
+        <img src="img/img0.jpg" alt="" class="post-img">
+        <h2 class="category">Arcane</h2>
+        <a href="#" class="post-title">Energia 0 - Nebunul </a>
+        <p class="post-description">Descrierea postării 1</p>
+      </div>
+
+    <!--en1-->
+
+    <div class="post-box arcane">
+      <img src="img/img1.jpg" alt="" class="post-img">
+      <h2 class="category">Arcane</h2>
+      <a href="post-page.html" class="post-title"> 
+        Energia 1
+        </a>
+        <span class="post-reference">Magicianul</span>
+        <p class="post-description"> despre energie
+           </p>
+      </div>
+
+  <!--en2-->
+
+  <div class="post-box arcane">
+    <img src="img/img2.jpg" alt="" class="post-img">
+    <h2 class="category">Arcane</h2>
+    <a href="post-page.html" class="post-title"> 
+      Energia 2
+        </a>
+        <span class="post-reference">Marea preoteasa</span>
+        <p class="post-description"> despre energie
+           </p>
+</div>
+
+      <!-- se repeta pentru toate postarile XD -->
+
+    </section>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous"></script>
+
+
+      <script src="main.js"> </script>
+      <script src="script.js"> </script>
+
+  </body>
+</html>
