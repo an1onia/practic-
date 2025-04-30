@@ -1,0 +1,2 @@
+# practic-
+varianata corectă
